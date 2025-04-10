@@ -67,3 +67,72 @@ header {
     text-decoration: none;
     border-radius: 5px;
 }
+/* Seksioni Shërbimeve */
+.services {
+    background-color: #f9fafb;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    width: calc(33.33% - 40px); /* Tre shërbime në rresht */
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    color: #f8b400;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+}
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(50% - 40px); /* Dy shërbime në rresht */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%; /* Një shërbim në rresht */
+    }
+}
