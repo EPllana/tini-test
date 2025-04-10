@@ -1,114 +1,329 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blerje Kompjutera - Faqja Kryesore ragzPRODUKT</title>
-   <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ragzPRODUKT - Blerje Kompjutera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+     
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      background: #111;
+      padding: 15px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo a {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+  background: url(backgr.png) no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 250px 20px;
+}
+
+
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #00bcd4;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0097a7;
+    }
+
+    .services {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #f1f1f1;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .products {
+      padding: 60px 20px;
+      background-color: #fafafa;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 15px;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Responsive Navbar */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: #222;
+        padding: 10px 0;
+      }
+
+      .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
-     
-      <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#">PRODUKT</a>
-                <img src="1-removebg-preview.png" height="150px" width="150px">
-            </div>
-            <ul class="nav-links">
-                <li><a href="pc.html">PC GAMING</a></li>
-                <li><a href="grafik.html">GRAFIK</a></li>
-                <li><a href="monitor.html">MONITOR</a></li>
-                <li><a href="about.html">ABOUT ME</a></li>
-                <li><a href="#">..</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">
+        <a href="#">PRODUKT</a>
+        <img src="1-removebg-preview.png" alt="Logo" height="60">
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="pc.html">PC Gaming</a></li>
+        <li><a href="grafik.html">Grafik</a></li>
+        <li><a href="monitor.html">Monitor</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
 
-   
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Zgjedh Kompjuterin tënd të Ëndrrave!</h1>
+      <p>Kompjutera të fuqishëm për çdo nevojë – nga gaming deri te puna profesionale.</p>
+      <a href="#products" class="btn">Shiko më shumë</a>
+    </div>
+  </section>
 
-    <!-- Sekzioni i Parallax -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Shumë mundësi për blerje kompjuterësh të shkëlqyer!</h1>
-            <p>Ne ofrojmë kompjuterë të avancuar për çdo nevojë. Të shpejtë, të fuqishëm dhe të dizajnuar për performancë maksimale.</p>
-            <a href="#products" class="btn">Shiko më shumë</a>
-        </div>
-    </section>
+  <section id="services" class="services container">
+    <h2>Shërbimet Tona</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Produkte Premium</h3>
+        <p>Cilësi e lartë për performancë pa kompromis.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mbështetje 24/7</h3>
+        <p>Zgjidhje për çdo problem, në çdo kohë.</p>
+      </div>
+      <div class="service-card">
+        <h3>Shpejtësi & Fuqi</h3>
+        <p>Konfigurime të avancuara për performancë maksimale.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Seksioni i Shërbimeve -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Shërbimet tona</h2>
-            <div class="service-card">
-                <h3>Produkte Premium</h3>
-                <p>Kompjuterë të cilësisë më të lartë për punë dhe lojëra</p>
-            </div>
-            <div class="service-card">
-                <h3>Mbështetje 24/7</h3>
-                <p>Shërbim dhe mbështetje për çdo kërkesë, 24 orë në ditë, 7 ditë në javë.</p>
-            </div>
-            <div class="service-card">
-                <h3>Shpejtësi dhe Performancë</h3>
-                <p>Kompiutera që ofrojnë performancë të lartë dhe shpejtësi pa kompromis.</p>
-            </div>
-        </div>
-    </section>
+  <section id="products" class="products container">
+    <h2>Produktet Gaming</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="b5f96d9eb0ccd578682264d813143a11-removebg-preview.png" alt="PC Gaming" style="padding-top: 10px;">
+        <h3>Kompjuter për Lojëra</h3>
+        <p>I9 gen 12, 5090 Ti, 256GB RAM, 4TB SSD + 4TB HDD</p>
+        <a href="#" class="btn">Bli tani</a>
+      </div>
+      <div class="product-card">
+        <img src="df433a4952cc28a08d84f02dca68621e-removebg-preview.png" alt="Grafik Card" style="padding-bottom: 100px; padding-top: 20px;">
+        <h3>Grafik Card 5090 Ti</h3>
+        <p>Performancë grafike e vitit 2025, 32GB RAM</p>
+        <a href="#" class="btn">Bli tani</a>
+      </div>
+      <div class="product-card">
+        <img src="0eeda3bf65874669801a7c640fdf7680-removebg-preview.png" alt="Monitor Gaming">
+        <h3>Monitor Alienware</h3>
+        <p>240Hz refresh rate për lojë të qetë</p>
+        <a href="#" class="btn">Bli tani</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Seksioni i Produkteve -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2>produkte gaming :</h2>
-            <div class="product-card">
-                <img src="b5f96d9eb0ccd578682264d813143a11-removebg-preview.png" alt="Kompjuter 1">
-                <h3>Kompjuter për Lojëra</h3>
-                <p>Me grafikë të shkëlqyer dhe performancë të shpejtë.</p>
-                <P>I9 gen 12 5090ti 256gb ram 4tb ssd 4tb hd</P>
-                <a href="#" class="btn">Bli tani</a>
-            </div>
-            <div class="product-card">
-                <img src="df433a4952cc28a08d84f02dca68621e-removebg-preview.png" alt="grafik card 1">
-                <h3>grafik card  </h3>
-                <p>new grafik card 2025</p>
-                <P>5090 ti 32gb ram</P>
-                <a href="#" class="btn">Bli tani</a>
-            </div>
-                <div class="product-card">
-                
-                    <img src="0eeda3bf65874669801a7c640fdf7680-removebg-preview.png" alt="monitor">
-                    <h3>monitor për Lojëra</h3>
-                    <p>Me  performancë të shpejtë.</p>
-                    <P>monitor alienware 240hz</P>
-                    <a href="#" class="btn">Bli tani</a>
-                </div>
-                <div class="product-card">
-                
-                  
-        </div>
-    </section>
+  <section id="contact" class="contact container">
+    <h2>Na Kontaktoni</h2>
+    <p>Keni pyetje? Na shkruani në emailin më poshtë dhe do ju kthejmë përgjigje sa më shpejt.</p>
+    <a href="mailto:info@blerjekompjuterash.com" class="btn">Kontakto tani</a>
+  </section>
 
-    <!-- Seksioni i Kontaktit -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <p>Na kontaktoni për më shumë informacion ose për ndihmë. Jemi këtu për t'ju ndihmuar.</p>
-            <a href="mailto:info@blerjekompjuterash.com" class="btn">Kontakto tani</a>
-        </div>
-    </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Blerje Kompjutera. Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Blerje Kompjutera. Të gjitha të drejtat e rezervuara.</p>
-        </div>
-    </footer>
+  <script>
+    // Navbar toggle për telefon
+    const menuToggle = document.getElementById("mobile-menu");
+    const navLinks = document.getElementById("navLinks");
 
-    <script src="file.js"></script>
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
 </body>
 </html>
-
